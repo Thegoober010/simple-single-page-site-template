@@ -48,14 +48,20 @@ nav#primary ul li a:visited {
 }
 
 /* primary nav selected link background color */
-nav#primary li.current,
-nav#primary li:hover {
+nav#primary ul li.current,
+nav#primary ul li:hover {
 	background-color: white;
 }
 
 /* primary nav selected link text color */
-nav#primary li.current a,
-nav#primary li:hover a {
+nav#primary ul li.current a,
+nav#primary ul li.current a:hover,
+nav#primary ul li.current a:active,
+nav#primary ul li.current a:visited,
+nav#primary ul li:hover a,
+nav#primary ul li:hover a:hover,
+nav#primary ul li:hover a:active,
+nav#primary ul li:hover a:visited {
 	color: black;
 }
 
