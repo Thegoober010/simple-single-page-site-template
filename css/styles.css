@@ -1,0 +1,71 @@
+/* --customizable site styles */
+
+/* basic text  */
+body {
+	font-family: Arial, sans-serif;
+}
+h1, h2, h3, p, li {
+	color: black;
+	line-height: 1.4em;
+}
+h1 {
+	font-weight: 600;
+	font-size: 32px;
+}
+h2 {
+	font-weight: 600;
+	font-size: 26px;
+}
+h3 {
+	font-weight: 600;
+	font-size: 22px;
+}
+p {
+	font-weight: 400;
+	font-size: 16px;
+}
+
+/* body links */
+p a,
+p a:visited {
+	color: black;
+	text-decoration: underline;
+}
+p a:hover,
+p a:active {
+	text-decoration: underline;	
+}
+
+/* columns minimum height */
+div.three-columns div {
+	min-height: 300px;
+}
+
+/* primary nav unselected links text color */
+nav#primary ul li a,
+nav#primary ul li a:visited {
+	color: white;
+}
+
+/* primary nav selected link background color */
+nav#primary li.current,
+nav#primary li:hover {
+	background-color: white;
+}
+
+/* primary nav selected link text color */
+nav#primary li.current a,
+nav#primary li:hover a {
+	color: black;
+}
+
+/* custom section styles */
+#home {
+	background-image: url('../img/bg1.jpg');
+}
+#first {
+	background-color: white;
+}
+#second {
+	background-image: url('../img/bg2.jpg');
+}
