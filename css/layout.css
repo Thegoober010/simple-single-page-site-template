@@ -57,6 +57,13 @@ nav#primary {
 	height: 32px;
 	overflow-y: hidden;
 	padding: 0;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	z-index: 1;
+}
+nav#primary.stuck {
+	position: fixed;
+	top: 0;
 }
 nav#primary ul {
 	margin: 0;
@@ -68,8 +75,8 @@ nav#primary ul li {
 	height: 100%;
 	clear: none;
 	float: left;
-	margin: 0;
-	padding: 5px 10px;
+	margin: 0 5px 0 0;
+	padding: 0;
 	text-decoration: none;
 	color: white;
 	text-decoration: center;
@@ -79,6 +86,8 @@ nav#primary ul li a:visited {
 	text-decoration: none;
 	color: white;
 	height: 100%;
+	display: inline-block;
+	padding: 5px 10px;
 }
 
 /* footer text */
@@ -130,6 +139,11 @@ div.three-columns div {
    -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
+/* helper class to clear floats */
+.clear {
+	clear: both;
+}
+
 /* mobile style */
 @media screen and (max-width: 768px) {
 
@@ -159,26 +173,42 @@ div.three-columns div {
 		height: auto;
 		min-height: 40px;
 		background-color: transparent;
+		border: 0;
 	}
 	nav#primary img.mobile-nav {
 		position: absolute;
 		width: 30px;
 		height: auto;		
 		top: 15px;
-		right: 15px;
+		right: 2.5%;
 		padding: 5px;
 		display: block;
 		cursor: pointer;
+		z-index: 2;
 	}
-	nav#primary ul {
+	nav#primary > ul {
 		display: none;
-	}
-	nav#primary ul li {
 		width: 94%;
+		margin: 0 3% 0 auto;
+		top: 50px;
+		padding: 0;
+		border: 2px solid black;
+		height: auto;
+		overflow-y: visible;
+	}
+	nav#primary > ul > li {
+		width: 100%;
 		margin: 0;
-		padding: 5px 3%;
+		padding: 0;
 		clear: both;
 		float: none;
 		background-color: black;
-	}		
+	}
+	nav#primary > ul > li > a {
+		display: inline-block;
+		width: 96%;
+		padding: 10px 2%;
+		margin: 0;
+
+	}	
 }
