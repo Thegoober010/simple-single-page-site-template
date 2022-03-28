@@ -25,8 +25,8 @@ $(document).ready(function() {
 		}
 	};
 
-	// iif the page is scrolled down past the primary nav's initial location or if the view is mobile,
-	// "stick" the nav to the top of the page by make its position fixed; otherwise, unstick it
+	// if the page is scrolled down past the primary nav's initial location, or if the view is mobile,
+	// then stick the nav to the top of the page; otherwise, unstick it
 	self.stickOrUnstickPrimaryNav = function() {
 			if ($("nav#primary img.mobile-nav").is(":visible") || $(window).scrollTop()>self.initialPrimaryNavTop) {
 				$("nav#primary").addClass("stuck");
@@ -61,14 +61,13 @@ $(document).ready(function() {
 		self.initialPrimaryNavTop=$( window ).height() - $("nav#primary").offset().top;
 		self.primaryNavHeight = $("nav#primary").height();
 
-		// on primary navigation click, scroll to the correct page section if the link is a hash
+		// on a primary navigation click, scroll to the correct page section if the link is a hash
 		// but if it's a URL path, let default behaviour apply instead
 		$("nav#primary ul li a").on("click", function(e) {
+
 			var href=$(this).attr("href");
 			if (href.charAt(0)=="#") {
 
-				// prevent default browser behaviour to jump to the hash
-				//e.preventDefault();
 
 				// move the highlight on the nav to the newly clicked item
 				$("nav#primary ul li.current").removeClass("current");
@@ -106,7 +105,7 @@ $(document).ready(function() {
 		});
 	};
 
-	// adjust primary nav when screen resizes
+	// adjust the primary nav when screen resizes
 	self.initResizeHandler = function() {
 		$(window).on("resize", function() {
 			if ($("nav#primary img.mobile-nav").is(":visible")) {
