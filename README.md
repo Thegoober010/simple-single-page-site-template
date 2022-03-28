@@ -12,11 +12,11 @@ This template is intentionally designed to be a simple base for future developme
 - Fully responsive, with a mobile breakpoint at 768px.
 - In desktop views, the primary navigation bar fixes to the top of the page as the content scrolls.
 - In mobile views, the primary navigation converts to a dropdown menu toggled via a hamburger menu icon.
-- Primary navigation bar links are animated to scroll smoothly to selected page section.
+- Primary navigation bar links are animated to scroll smoothly to the selected page section.
 - The browser location bar hash is automatically updated to always reflect the section being viewed.
 - Section background images can be fixed for a parallax scrolling effect.
-- An example static page is included, for sections (such as privacy policies) that are perhaps not wanted on the main page.
-- The CSS is separated into two stylehseets, one for core functionality and one for fonts, colors and other visual styling.
+- Though this is a single-page layout, an example static page is included, for sections (such as privacy policies) that are perhaps not wanted on the main page.
+- For ease of customization, the CSS is separated into two stylesheets, one for the core layout and one for fonts, colors and other visual styling.
 
 ### Customization
 
