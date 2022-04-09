@@ -5,7 +5,6 @@ $(document).ready(function() {
 
 	self.scrollDelay=700; // number of ms it takes to scroll to a new page location
 	self.headerElementId=$("header:first").attr("id"); // id tag of main site header element
-	console.log('h='+self.headerElementId);
 
 	// scroll page to a specified element
 	self.scrollTo = function(el) {
