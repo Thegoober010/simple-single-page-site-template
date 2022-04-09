@@ -4,6 +4,8 @@ $(document).ready(function() {
 	var self=this;
 
 	self.scrollDelay=700; // number of ms it takes to scroll to a new page location
+	self.headerElementId=$("header:first").attr("id"); // id tag of main site header element
+	console.log('h='+self.headerElementId);
 
 	// scroll page to a specified element
 	self.scrollTo = function(el) {
@@ -18,13 +20,16 @@ $(document).ready(function() {
 	// hash should have # character prepended
 	self.updateHashWithoutJump = function(hash) {
 		if (typeof hash != "undefined" && hash.length && hash.charAt(0)=="#") {
+			if (hash=="#"+self.headerElementId && typeof history.replaceState != 'undefined') {
+				history.replaceState(null, null, ' '); // hides hash when back to top of page
+				return;
+			}
 			el=$(hash);
-			el.attr("id","");
+			el.attr("id","");				
 			window.location.hash=hash;
-			el.attr("id",hash.substring(1))
+			el.attr("id",hash.substring(1))	
 		}
 	};
-
 	// if the page is scrolled down past the primary nav's initial location, or if the view is mobile,
 	// then stick the nav to the top of the page; otherwise, unstick it
 	self.stickOrUnstickPrimaryNav = function() {
