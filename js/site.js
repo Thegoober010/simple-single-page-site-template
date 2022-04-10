@@ -16,19 +16,32 @@ $(document).ready(function() {
 	};
 
 	// update URL hash without the browser jumping to it immediately, as is default behaviour
-	// hash should have # character prepended
 	self.updateHashWithoutJump = function(hash) {
-		if (typeof hash != "undefined" && hash.length && hash.charAt(0)=="#") {
-			if (hash=="#"+self.headerElementId && typeof history.replaceState != 'undefined') {
-				history.replaceState(null, null, ' '); // hides hash when back to top of page
-				return;
+		if (typeof hash != "undefined" && hash.length) {
+
+			// if hash doesn't start with # character, add it
+			if (hash.charAt(0)!="#") {
+				hash="#"+hash;
 			}
-			el=$(hash);
-			el.attr("id","");				
-			window.location.hash=hash;
-			el.attr("id",hash.substring(1))	
+
+			// for modern browsers, used history to change the hash
+			if (typeof history.replaceState != 'undefined') { 
+				if (hash=="#"+self.headerElementId) {
+					history.replaceState(null, null, ' '); // don't show hash when back to top of page
+				} else {
+					history.replaceState(null, null, hash);
+				}
+
+			// for old browsers, use a workaround to change the hash directly in the URL
+			} else { 
+				el=$(hash);
+				el.attr("id","");				
+				window.location.hash=hash;
+				el.attr("id",hash.substring(1))	
+			}
 		}
 	};
+
 	// if the page is scrolled down past the primary nav's initial location, or if the view is mobile,
 	// then stick the nav to the top of the page; otherwise, unstick it
 	self.stickOrUnstickPrimaryNav = function() {
