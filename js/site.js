@@ -24,7 +24,7 @@ $(document).ready(function() {
 				hash="#"+hash;
 			}
 
-			// for modern browsers, used history to change the hash
+			// for modern browsers, use history to change the hash
 			if (typeof history.replaceState != 'undefined') { 
 				if (hash=="#"+self.headerElementId) {
 					history.replaceState(null, null, ' '); // don't show hash when back to top of page
