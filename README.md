@@ -3,7 +3,7 @@
 This is a simple single-page website coded using plain HTML, CSS, and a bit of jQuery. This is intended to be a clean implementation of a common layout to be used as a template for further development.
 
 ### Deployment
-Simply clone the files in this repository into any webserver doc root, and then visit `index.html` in a modern browser.
+Simply clone the files in this repository into any webserver doc root, and then visit `index.html` in a modern browser. 
 
 ### Key Features
 This template is intentionally designed to be a simple base for future development, but some common useful functionality is included:
