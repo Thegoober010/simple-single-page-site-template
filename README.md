@@ -1,8 +1,6 @@
 # Simple Single-Page Site Template
 
-This is a simple single-page website coded using plain HTML, CSS, and a bit of jQuery. This is intended to be a clean implementation of a common layout to be used as a template for further development
-
-Live Demo: https://www.garysmith.ca/demos/simple-single-page-site-template/index.html
+This is a simple single-page website coded using plain HTML, CSS, and a bit of jQuery. This is intended to be a clean implementation of a common layout to be used as a template for further development.
 
 ### Deployment
 Simply clone the files in this repository into any webserver doc root, and then visit `index.html` in a modern browser.
